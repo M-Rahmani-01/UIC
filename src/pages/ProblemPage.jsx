@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import toast from "react-hot-toast";
 import { ChevronDown, ChevronUp, Lightbulb, Play, Send, RotateCcw } from "lucide-react";
-import { useAuthStore } from "../store/useAuthStore";
+import  useAuthStore from "../store/useAuthStore";
 import { useProgressStore } from "../store/useProgressStore";
 import { saveProgress, saveCertificate } from "../firebase/helpers";
 import CodeEditor from "../components/editor/CodeEditor";

@@ -1,0 +1,68 @@
+export const languages = [
+  {
+    id: 'c',
+    name: 'C Language',
+    tagline: 'The foundation of all languages',
+    logo: '🔷',
+    theme: { primary: '#1B4332', accent: '#52B788', bg: '#081C15', text: '#FFFFFF' },
+    topics: ['arrays', 'strings', 'functions', 'pointers', 'structures', 'loops'],
+  },
+  {
+    id: 'cpp',
+    name: 'C++',
+    tagline: 'Power and performance combined',
+    logo: '⚡',
+    theme: { primary: '#1e3a5f', accent: '#60a5fa', bg: '#0a1628', text: '#FFFFFF' },
+    topics: ['classes', 'inheritance', 'stl', 'templates', 'pointers', 'arrays'],
+  },
+  {
+    id: 'java',
+    name: 'Java',
+    tagline: 'Write once, run anywhere',
+    logo: '☕',
+    theme: { primary: '#3d1a00', accent: '#f97316', bg: '#1a0a00', text: '#FFFFFF' },
+    topics: ['basics', 'oops', 'collections', 'exceptions', 'threads', 'io'],
+  },
+  {
+    id: 'python',
+    name: 'Python',
+    tagline: 'Simple, powerful, beautiful',
+    logo: '🐍',
+    theme: { primary: '#1a2744', accent: '#fbbf24', bg: '#0d1220', text: '#FFFFFF' },
+    topics: ['basics', 'lists', 'dicts', 'functions', 'oop', 'modules'],
+  },
+  {
+    id: 'javascript',
+    name: 'JavaScript',
+    tagline: 'The language of the web',
+    logo: '🌐',
+    theme: { primary: '#3b2800', accent: '#facc15', bg: '#1a1100', text: '#FFFFFF' },
+    topics: ['basics', 'dom', 'async', 'arrays', 'objects', 'es6'],
+  },
+  {
+    id: 'html',
+    name: 'HTML & CSS',
+    tagline: 'Build beautiful web pages',
+    logo: '🎨',
+    theme: { primary: '#3d0a0a', accent: '#f87171', bg: '#1a0404', text: '#FFFFFF' },
+    topics: ['tags', 'forms', 'tables', 'css-basics', 'flexbox', 'grid'],
+  },
+  {
+    id: 'sql',
+    name: 'SQL',
+    tagline: 'Master databases and data',
+    logo: '🗄️',
+    theme: { primary: '#0a2744', accent: '#818cf8', bg: '#050e1a', text: '#FFFFFF' },
+    topics: ['select', 'joins', 'where', 'groupby', 'indexes', 'transactions'],
+  },
+  {
+    id: 'dsa',
+    name: 'DSA',
+    tagline: 'Crack coding interviews',
+    logo: '🔗',
+    theme: { primary: '#1a0a2e', accent: '#c084fc', bg: '#0a0414', text: '#FFFFFF' },
+    topics: ['arrays', 'linkedlist', 'stack', 'queue', 'trees', 'graphs', 'sorting'],
+  },
+]
+
+export const getLanguage = (id) => languages.find((l) => l.id === id)

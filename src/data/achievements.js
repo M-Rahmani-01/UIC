@@ -1,0 +1,58 @@
+export const achievements = [
+  {
+    id: 'first-solve',
+    emoji: '🎯',
+    title: 'First Blood',
+    description: 'Solved your very first problem!',
+    condition: (progress) => progress.totalSolved >= 1,
+  },
+  {
+    id: 'python-starter',
+    emoji: '🐍',
+    title: 'Python Starter',
+    description: 'Completed your first Python topic',
+    condition: (progress) => (progress.python?.completedTopics?.length || 0) >= 1,
+  },
+  {
+    id: 'problem-solver-5',
+    emoji: '🔥',
+    title: '5 Problems Solved',
+    description: 'Solved 5 problems total',
+    condition: (progress) => progress.totalSolved >= 5,
+  },
+  {
+    id: 'streak-3',
+    emoji: '📅',
+    title: '3-Day Streak',
+    description: 'Coded for 3 days in a row!',
+    condition: (progress) => (progress.streak || 0) >= 3,
+  },
+  {
+    id: 'certificate-1',
+    emoji: '🏆',
+    title: 'Certified Coder',
+    description: 'Earned your first certificate',
+    condition: (progress) => (progress.certificates || 0) >= 1,
+  },
+  {
+    id: 'multi-lang',
+    emoji: '🌐',
+    title: 'Polyglot',
+    description: 'Started learning 3+ languages',
+    condition: (progress) => Object.keys(progress).filter(k => progress[k]?.completedTopics?.length > 0).length >= 3,
+  },
+  {
+    id: 'perfect-week',
+    emoji: '⭐',
+    title: 'Perfect Week',
+    description: 'Coded every day for a week',
+    condition: (progress) => (progress.streak || 0) >= 7,
+  },
+  {
+    id: 'dsa-warrior',
+    emoji: '⚔️',
+    title: 'DSA Warrior',
+    description: 'Completed 3 DSA topics',
+    condition: (progress) => (progress.dsa?.completedTopics?.length || 0) >= 3,
+  },
+]

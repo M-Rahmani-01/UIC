@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/config'
-import useAuthStore from "../store/useAuthStore";
+import  useAuthStore  from "../store/useAuthStore"
 import { saveUserProfile } from '../firebase/helpers'
 
 export function useAuth() {
@@ -23,7 +23,6 @@ export function useAuth() {
             avatar: firebaseUser.photoURL || null,
           }
 
-          // 🔥 Wrap in try-catch safe block
           try {
             await saveUserProfile(firebaseUser.uid, {
               name: userData.name,
@@ -42,7 +41,7 @@ export function useAuth() {
         console.error("Auth error:", err)
         clearUser()
       } finally {
-        setLoading(false) // ✅ VERY IMPORTANT
+        setLoading(false)
       }
     })
 

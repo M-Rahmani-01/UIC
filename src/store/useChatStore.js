@@ -1,19 +1,24 @@
-import { create } from 'zustand'
+import { create } from 'zustand';
 
 const useChatStore = create((set) => ({
   messages: [],
   isOpen: false,
   isLoading: false,
 
-  addMessage: (message) => set((state) => ({
-    messages: [...state.messages, {
-      id: Date.now(),
-      timestamp: new Date().toISOString(),
-      ...message,
-    }],
-  })),
+  addMessage: (message) =>
+    set((state) => ({
+      messages: [
+        ...state.messages,
+        {
+          id: Date.now(),
+          timestamp: new Date().toISOString(),
+          ...message,
+        },
+      ],
+    })),
 
-  toggleChat: () => set((state) => ({ isOpen: !state.isOpen })),
+  toggleChat: () =>
+    set((state) => ({ isOpen: !state.isOpen })),
 
   openChat: () => set({ isOpen: true }),
 
@@ -24,6 +29,6 @@ const useChatStore = create((set) => ({
   clearMessages: () => set({ messages: [] }),
 
   setMessages: (messages) => set({ messages }),
-}))
+}));
 
-export default useChatStore
+export default useChatStore;

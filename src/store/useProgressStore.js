@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 const useProgressStore = create((set, get) => ({
   progress: {},
@@ -13,7 +13,7 @@ const useProgressStore = create((set, get) => ({
           [topicId]: {
             ...(state.progress[langId]?.[topicId] || {}),
             ...data,
-            topicId, // ✅ important for tracking
+            topicId,
           },
         },
       },
@@ -44,11 +44,11 @@ const useProgressStore = create((set, get) => ({
 
   isProblemCompleted: (langId, topicId, problemId) => {
     const state = get();
-    const completed = state.progress?.[langId]?.[topicId]?.completedProblems || [];
+    const completed =
+      state.progress?.[langId]?.[topicId]?.completedProblems || [];
     return completed.includes(problemId);
   },
 
-  // ✅ THIS FIXES YOUR ERROR
   getLanguageProgress: (langId) => {
     const state = get();
     const langProgress = state.progress?.[langId] || {};
@@ -60,6 +60,7 @@ const useProgressStore = create((set, get) => ({
       .map((t) => t.topicId || "");
 
     const totalTopics = topics.length;
+
     const percentComplete =
       totalTopics > 0
         ? Math.round((completedTopics.length / totalTopics) * 100)

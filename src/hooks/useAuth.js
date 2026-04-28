@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/config'
-import useAuthStore from '../store/useAuthStore'
+import useAuthStore from "../store/useAuthStore";
 import { saveUserProfile } from '../firebase/helpers'
 
 export function useAuth() {
